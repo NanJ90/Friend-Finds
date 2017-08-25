@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Finder | Survey</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://use.fontawesome.com/41a66b8b63.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <style>
+    	div img{
+			width:50%;
+			height:50%;
+			border:blue;
+			background:grey;
+    	}
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Survey Questions</h1>
+        <hr>
+        		<!-- About you  -->
+        <h2>About You</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name (Required)</label>
+                <input class="form-control" id="name" placeholder="name">
+            </div>
+            <div class="form-group">
+                <label for="image">Link to Photo Image (Required)</label>
+                <input type="link" class="form-control" id="image" placeholder="htt://">
+            </div>
+        </form>
+        <hr>
+        		<!-- Questions -->
+
+
+
+<!-- 1 -->
+		<h2>Question 1</h2>
+        	<h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+          <!--   <input type="text" list="question1" /> -->
+				<select id="q1">
+				  <!-- <option value="" selected>Choose here</option> -->
+				  <option value="1">1</option>
+				  <option value="2">2</option>
+				  <option value="3">3</option>
+				  <option value="4">4</option>
+				  <option value="5">5</option>
+				</select>
+
+<!-- 2 -->
+		<h2>Question 2</h2>
+        	<h4>Generally speaking, you rely more on your experience than your imagination.</h4>
+            <select id="q2">
+              <!-- <option value="" selected>Choose here</option> -->
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			  <option value="5">5</option>
+			</select>
+<!-- 3 -->
+		<h2>Question 3</h2>
+        	<h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+            <select id="q3">
+              <!-- <option value="" selected>Choose here</option> -->
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			  <option value="5">5</option>
+			</select>
+<!-- 4 -->
+		<h2>Question 4</h2>
+        	<h4>You rarely do something just out of sheer curiosity.</h4>
+            <select id="q4">
+              <!-- <option value="" selected>Choose here</option> -->
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			  <option value="5">5</option>
+			</select>
+<!-- 5 -->
+		<h2>Question 5</h2>
+        	<h4>People can rarely upset you.</h4>
+            <select id="q5">
+              <!-- <option value="" selected>Choose here</option> -->
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			  <option value="5">5</option>
+			</select>
+<!-- 6 -->
+		<h2>Question 6</h2>
+        	<h4>It is often difficult for you to relate to other people’s feelings.</h4>
+            <select id="q6">
+              <!-- <option value="" selected>Choose here</option> -->
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			  <option value="5">5</option>
+			</select>
+<!-- 7 -->
+		<h2>Question 7</h2>
+        	<h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
+            <select id="q7">
+              <!-- <option value="" selected>Choose here</option> -->
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			  <option value="5">5</option>
+			</select>
+<!-- 8 -->
+		<h2>Question 8</h2>
+        	<h4>You rarely get carried away by fantasies and ideas.</h4>
+            <select id="q8">
+              <!-- <option value="" selected>Choose here</option> -->
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			  <option value="5">5</option>
+			</select>
+<!-- 9 -->
+		<h2>Question 9</h2>
+        	<h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
+            <select id="q9">
+              <!-- <option value="" selected>Choose here</option> -->
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			  <option value="5">5</option>
+			</select>
+<!-- 10 -->
+		<h2>Question 10</h2>
+        	<h4>You feel more energetic after spending time with a group of people.</h4>
+            <select id="q10">
+              <!-- <option value="" selected>Choose here</option> -->
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			  <option value="5">5</option>
+			</select>
+			<hr>
+        <!-- Submit -->   
+            <button type="submit" class="btn btn-primary" id="submitButton" onclick="saveSelections()">Submit</button>
+
+        <script>
+        	var score;
+        	var newFriend;
+
+        	var scoreArr = [];
+        	document.getElementById("submitButton").addEventListener("click", function(event){
+    			event.preventDefault();
+    			var newFriend = {
+    				name:$("#name").val().trim(),
+    				photo:$("#image").val().trim(),
+    				scores:scoreArr
+    			}
+    			console.log(newFriend);
+    			$.post("/api/friends", newFriend, function(data){
+	    				var newDiv = $("<div id = 'dialog'>");
+	    				newDiv.append($("<p>Name: " + data.name+ "</p>"));
+	    				var img = $("<img>")
+	    				img.attr("src",data.photo);
+	    				newDiv.append(img);
+	    				newDiv.dialog();
+	    			});
+			});        	
+        	function saveSelections(){
+
+        		$("select").each(function(index,element){
+        			
+    				// console.log($("option:selected", this).val());
+    				score= parseInt($("option:selected", this).val());
+    				// score= $("option:selected", this).val();
+    				// console.log(parseInt(score));
+    				scoreArr.push(score);
+    				// console.log(scoreArr);
+        		});
+        	}
+
+
+        	
+        </script>
+    </div>
+</body>
