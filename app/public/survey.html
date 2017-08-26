@@ -176,38 +176,17 @@
     			}
     			console.log(newFriend);
     			$.post("/api/friends", newFriend, function(data){
-	    				var newDiv = $("<div id = 'myModal'>");
-	    				newDiv.append($("<p>Name: " + data.name+ "</p>"));
+	    				var newDiv = $("<div id = 'popup' class ='text-center'>");
+	    				newDiv.append($("<h3>Name: " + data.name+ "</h3>"));
 	    				var img = $("<img id='myImg'>")
 	    				img.attr("src",data.photo);
 	    				newDiv.append(img);
-	    				// newDiv.dialog();
-	    				// var modal = $('myModal');
-	    				// modal.style.display ="z"
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-// var img = document.getElementById('myImg');
-// var modalImg = document.getElementById("img01");
-// var captionText = document.getElementById("caption");
-// img.onclick = function(){
-//     modal.style.display = "block";
-//     modalImg.src = this.src;
-//     captionText.innerHTML = this.alt;
-// }
-
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
-
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() { 
-//     modal.style.display = "none";
-// }
+	    				newDiv.dialog();
 	    			});
 			});        	
         	function saveSelections(){
 
         		$("select").each(function(index,element){
-        			
     				// console.log($("option:selected", this).val());
     				score= parseInt($("option:selected", this).val());
     				// score= $("option:selected", this).val();
